@@ -7,15 +7,16 @@ namespace Metaphone
     {
         static void Main(string[] args)
         {
-            //https://medium.com/@ievgenii.shulitskyi/phonetic-matching-algorithms-50165e684526
-            //https://searchcode.com/codesearch/raw/2366000/
-            //https://www.c-sharpcorner.com/uploadfile/mgold/extending-the-string-class/
-            //https://www.techiedelight.com/replace-character-specific-position-string-csharp/
-
-            string input = Console.ReadLine();
-            while (input != "quit")
+            string input = "";
+            while (true) 
             {
+                
+                input = Console.ReadLine();
 
+                if(input == "quit program")
+                {
+                    break;
+                }
 
                 // Capitalize all leters
                 input = input.ToUpper();
@@ -268,15 +269,10 @@ namespace Metaphone
                         i--;
                     }
                 }
-
+                Console.WriteLine("");
                 Console.WriteLine(input);
-                input = Console.ReadLine();
-                Console.Clear();
+                Console.WriteLine("");
             }
-
-
-
-
             
         }
 
